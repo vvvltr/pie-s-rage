@@ -12,6 +12,7 @@ public class ItemPickup : MonoBehaviour
     {
         InventoryManager.Instance.AddItem(Item);
         Destroy(gameObject);
+        InventoryManager.Instance.ListItems();
     }
 
     public void OnMouseDown()

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Scrap
   m_EditorClassIdentifier: 
   id: 0
-  itemName: Scrap
+  name: Scrap
   icon: {fileID: 0}
