@@ -13,8 +13,6 @@ public class CameraMovement : MonoBehaviour
     public void Awake()
     {
         Instance = this;
-        rightCamera.enabled = true;
-        leftCamera.enabled = false;
     }
     // Start is called before the first frame update
     public void Start()

@@ -1,8 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Security.Cryptography;
 using UnityEngine;
 
-public class ItemController : MonoBehaviour
+namespace InventoryScripts
 {
-    public Item item;
+    public class ItemController : MonoBehaviour
+    {
+        public Item Item;
+
+        public void Start()
+        {
+            if (InventoryManager.Instance.DestroyedItems.Contains(Item))
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        public void Pickup()
+        {
+            InventoryManager.Instance.AddItem(Item);
+            Destroy(gameObject);
+            InventoryManager.Instance.AddItemToInventoryBar(Item);
+        }
+
+        public void OnMouseDown()
+        {
+            Pickup();
+        }
+    }
 }
