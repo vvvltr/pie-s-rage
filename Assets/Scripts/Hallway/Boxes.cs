@@ -40,21 +40,6 @@ public class Boxes : MonoBehaviour
                     //transform.Rotate(180, 0, 0);
                     clicked = true;
                 }
-                else
-                {
-                    string n4 = n[0] + "" + n[1] + "" + n[2] + "" + n[3];
-                    if (hit.collider != null && n4 == "Door")
-                    {
-                        if (n == "DoorToReactor")
-                            SceneManager.LoadScene("Reactor");
-                        else if (n == "DoorToCabin")
-                            SceneManager.LoadScene("Cabin");
-                        else if (n == "DoorToEngine")
-                            SceneManager.LoadScene("Engine");
-                        else if (n == "DoorToHallway")
-                            SceneManager.LoadScene("Hallway");
-                    }
-                }
             }
         }
         if (clicked)
