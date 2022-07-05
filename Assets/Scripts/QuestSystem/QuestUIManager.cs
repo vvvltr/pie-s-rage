@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-namespace InventoryScripts
+namespace QuestSystem
 {
-    public class UIManager : MonoBehaviour
+    public class QuestUIManager : MonoBehaviour
     {
-        private static UIManager Instance = null; // static (class level) variable
+        private static QuestUIManager Instance = null; // static (class level) variable
         
         private void Awake()
         {
