@@ -57,18 +57,38 @@ public class Moves : MonoBehaviour
 						curObj.GetComponent<Rigidbody>().useGravity = false; // убираем гравитацию
 						curObj.GetComponent<Rigidbody>().freezeRotation = true; // заморозка вращения
 																				//curObj.position += new Vector3(0, 0.5f, 0); // немного приподымаем выбранный объект
-						offset = curObj.position -
-						Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
+						
+						Debug.Log("eeee");
+						if (curObj.GetComponent<TestMoveMous>().w_or_h == 1)
+						{
+							offset = curObj.position -
+							Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 10.0f));
+						}
+						else if (curObj.GetComponent<TestMoveMous>().w_or_h == 2)
+						{
+							offset = curObj.position -
+							Camera.main.ScreenToWorldPoint(new Vector3(0, Input.mousePosition.y, 10.0f));
+						}
 					}
 				}
 
 				if (curObj)
 				{
 					Debug.Log("eeee");
+					if(curObj.GetComponent<TestMoveMous>().w_or_h == 1)
+                    {
+						Vector3 newPosition = new Vector3(Input.mousePosition.x, 0, 10.0f);
+						curObj.GetComponent<Rigidbody>().MovePosition(Camera.main.ScreenToWorldPoint(newPosition) + offset);
+					}
+					else if(curObj.GetComponent<TestMoveMous>().w_or_h == 2)
+                    {
+						Vector3 newPosition = new Vector3(0, Input.mousePosition.y, 10.0f);
+						curObj.GetComponent<Rigidbody>().MovePosition(Camera.main.ScreenToWorldPoint(newPosition) + offset);
+					}
 					//Vector3 mousePosition = _camera.ScreenToWorldPoint(new Vector3(curObj.position.x, curObj.position.y, curObj.position.z));
 					//curObj.GetComponent<Rigidbody>().MovePosition(new Vector3(mousePosition.x, curObj.position.y + Input.GetAxis("Mouse ScrollWheel") * step, mousePosition.z));
-					Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
-					curObj.GetComponent<Rigidbody>().MovePosition(Camera.main.ScreenToWorldPoint(newPosition) + offset);
+					//Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
+					//curObj.GetComponent<Rigidbody>().MovePosition(Camera.main.ScreenToWorldPoint(newPosition) + offset);
 				}
 			}
 			else

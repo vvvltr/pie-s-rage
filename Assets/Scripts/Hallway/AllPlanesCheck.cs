@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AllPlanesCheck : MonoBehaviour
 {
+    public Camera _camera;
     private Vector3 v;
     public bool isCorrect(Vector3 r /*int x, int y, int z*/)
     {
@@ -38,6 +39,7 @@ public class AllPlanesCheck : MonoBehaviour
         }
         if (b)
         {
+            _camera.transform.GetComponent<Boxes>().StopMiniGame();
             Debug.Log("I am alive!");
         }
     }

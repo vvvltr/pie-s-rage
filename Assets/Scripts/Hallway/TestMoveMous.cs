@@ -7,6 +7,7 @@ public class TestMoveMous : MonoBehaviour
     private int col;
     private Vector3 pos;
     public GameObject cheker;
+    public int w_or_h;
     void Start()
     {
         pos = transform.position;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Doors : MonoBehaviour
 {
@@ -22,8 +23,8 @@ public class Doors : MonoBehaviour
                 //GameObject target = hit.collider.GameObject;
                 string n = hit.transform.name;
                 
-                string n4 = n[0] + "" + n[1] + "" + n[2] + "" + n[3];
-                if (hit.collider != null && n4 == "Door")
+                string n4 = n[0] + "" + n[1] + "" + n[2];
+                if (hit.collider != null && n4 == "Doo")
                 {
                     if (n == "DoorToReactor")
                         SceneManager.LoadScene("Reactor");
@@ -41,4 +42,4 @@ public class Doors : MonoBehaviour
 
     }
 }
-}
+
