@@ -29,7 +29,7 @@ public class AllPlanesCheck : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             var child = transform.GetChild(i);
-            b = child.GetComponent<DragDrop>().isCorrect();
+            b = child.GetComponent<PlaneRotate>().isCorrect();
             //b = isCorrect(child.localEulerAngles);
             if (!b)
             {
@@ -39,7 +39,7 @@ public class AllPlanesCheck : MonoBehaviour
         }
         if (b)
         {
-            _camera.transform.GetComponent<Boxes>().StopMiniGame();
+            _camera.transform.GetComponent<EventController>().StopMiniGame();
             Debug.Log("I am alive!");
         }
     }
