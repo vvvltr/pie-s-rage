@@ -48,7 +48,7 @@ public class Moves : MonoBehaviour
 				if (Physics.Raycast(ray, out hit))
 				{
 					Debug.Log("cccc");
-					if (GetTag(hit.transform.tag) && hit.rigidbody && !curObj)
+					if (GetTag(hit.transform.tag) && (hit.rigidbody && !curObj))
 					{
 						Debug.Log("dddd");
 						curObj = hit.transform;
@@ -61,13 +61,15 @@ public class Moves : MonoBehaviour
 						Debug.Log("eeee");
 						if (curObj.GetComponent<TestMoveMous>().w_or_h == 1)
 						{
+							Debug.Log("w");
 							offset = curObj.position -
-							Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 10.0f));
+							Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0));
 						}
 						else if (curObj.GetComponent<TestMoveMous>().w_or_h == 2)
 						{
+							Debug.Log("h");
 							offset = curObj.position -
-							Camera.main.ScreenToWorldPoint(new Vector3(0, Input.mousePosition.y, 10.0f));
+							Camera.main.ScreenToWorldPoint(new Vector3(0, Input.mousePosition.y, 0));
 						}
 					}
 				}
@@ -77,12 +79,14 @@ public class Moves : MonoBehaviour
 					Debug.Log("eeee");
 					if(curObj.GetComponent<TestMoveMous>().w_or_h == 1)
                     {
-						Vector3 newPosition = new Vector3(Input.mousePosition.x, 0, 10.0f);
+						Debug.Log("w");
+						Vector3 newPosition = new Vector3(Input.mousePosition.x, 0, 0);
 						curObj.GetComponent<Rigidbody>().MovePosition(Camera.main.ScreenToWorldPoint(newPosition) + offset);
 					}
 					else if(curObj.GetComponent<TestMoveMous>().w_or_h == 2)
-                    {
-						Vector3 newPosition = new Vector3(0, Input.mousePosition.y, 10.0f);
+					{
+						Debug.Log("h");
+						Vector3 newPosition = new Vector3(0, Input.mousePosition.y, 0);
 						curObj.GetComponent<Rigidbody>().MovePosition(Camera.main.ScreenToWorldPoint(newPosition) + offset);
 					}
 					//Vector3 mousePosition = _camera.ScreenToWorldPoint(new Vector3(curObj.position.x, curObj.position.y, curObj.position.z));
@@ -125,6 +129,7 @@ public class Moves : MonoBehaviour
 				curObj.GetComponent<Rigidbody>().mass = mass;
 				if (checkForCollision == false)
 				{
+					Debug.Log("colision");
 					inCollision();
 				}
 			}
