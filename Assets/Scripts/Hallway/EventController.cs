@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using QuestSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,11 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class EventController : MonoBehaviour
 {
+    public QuestController questController;
+    
     private List<Vector3> b_pos_1;
     private List<Vector3> b_pos_2;
     private bool clicked;
     private bool miniGameOn;
-    private bool miniGamePassed;
+    public bool miniGamePassed;
     public GameObject room;
     public GameObject moving_boxes_1;
     public GameObject moving_boxes_2;
@@ -37,7 +40,6 @@ public class EventController : MonoBehaviour
         miniGamePassed = false;
         canvas.SetActive(false);
         room.SetActive(true);
-
     }  
 
     // Update is called once per frame
@@ -66,8 +68,6 @@ public class EventController : MonoBehaviour
             miniGameOn = true;
             clicked = false;
         }
-
-
     }
     public void Cliked()
     {

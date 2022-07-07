@@ -17,7 +17,7 @@ public class BoxCheker : MonoBehaviour
     {
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         _camera.transform.GetComponent<EventController>().StopMiniGame();
     }
