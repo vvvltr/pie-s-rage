@@ -2539,6 +2539,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 853177045201664324, guid: 2a302cedf2139c24597d0abe6072d2a4,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorToHallway
+      objectReference: {fileID: 0}
     - target: {fileID: 1712970282155122869, guid: 2a302cedf2139c24597d0abe6072d2a4,
         type: 3}
       propertyPath: m_RootOrder
@@ -2601,6 +2606,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a302cedf2139c24597d0abe6072d2a4, type: 3}
+--- !u!1 &2084292212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 853177045201664324, guid: 2a302cedf2139c24597d0abe6072d2a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2084292211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2084292213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084292212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4994584, y: 8.000052, z: 5.2657204}
+  m_Center: {x: 0.24972907, y: 4.0000005, z: -0.004133464}
 --- !u!1 &2142186402
 GameObject:
   m_ObjectHideFlags: 0

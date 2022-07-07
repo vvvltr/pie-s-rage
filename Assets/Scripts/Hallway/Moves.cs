@@ -39,18 +39,18 @@ public class Moves : MonoBehaviour
 	{
 		if (Input.GetMouseButton(0) && checkForCollision) // Удерживать left кнопку мыши
 		{
-			Debug.Log("aaaa");
+			//Debug.Log("aaaa");
 			if (mode == ProjectMode.Project3D)
 			{
-				Debug.Log("bbbb");
+				//Debug.Log("bbbb");
 				RaycastHit hit;
 				Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 				if (Physics.Raycast(ray, out hit))
 				{
-					Debug.Log("cccc");
+					//Debug.Log("cccc");
 					if (GetTag(hit.transform.tag) && (hit.rigidbody && !curObj))
 					{
-						Debug.Log("dddd");
+						//Debug.Log("dddd");
 						curObj = hit.transform;
 						mass = curObj.GetComponent<Rigidbody>().mass; // запоминаем массу объекта
 						curObj.GetComponent<Rigidbody>().mass = 0.0001f; // убираем массу, чтобы не сбивать другие объекты
@@ -58,35 +58,37 @@ public class Moves : MonoBehaviour
 						curObj.GetComponent<Rigidbody>().freezeRotation = true; // заморозка вращения
 																				//curObj.position += new Vector3(0, 0.5f, 0); // немного приподымаем выбранный объект
 						
-						Debug.Log("eeee");
+						//Debug.Log("eeee");
 						if (curObj.GetComponent<TestMoveMous>().w_or_h == 1)
 						{
-							Debug.Log("w");
+							Debug.Log("p_w");
 							offset = curObj.position -
-							Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0));
+							Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 10.0f, 10.0f));
 						}
 						else if (curObj.GetComponent<TestMoveMous>().w_or_h == 2)
 						{
-							Debug.Log("h");
+							Debug.Log("p_h");
 							offset = curObj.position -
-							Camera.main.ScreenToWorldPoint(new Vector3(0, Input.mousePosition.y, 0));
+							Camera.main.ScreenToWorldPoint(new Vector3(10.0f, Input.mousePosition.y, 10.0f));
 						}
 					}
 				}
 
 				if (curObj)
 				{
-					Debug.Log("eeee");
+					//Debug.Log("eeee");
 					if(curObj.GetComponent<TestMoveMous>().w_or_h == 1)
                     {
-						Debug.Log("w");
-						Vector3 newPosition = new Vector3(Input.mousePosition.x, 0, 0);
+						Debug.Log("m_w");
+						Vector3 newPosition = new Vector3(Input.mousePosition.x, 10.0f, 10.0f);
+						//Debug.Log(curObj.transform.position[0]+" "+Input.mousePosition.x+" "+ offset[0]);
 						curObj.GetComponent<Rigidbody>().MovePosition(Camera.main.ScreenToWorldPoint(newPosition) + offset);
+
 					}
 					else if(curObj.GetComponent<TestMoveMous>().w_or_h == 2)
 					{
-						Debug.Log("h");
-						Vector3 newPosition = new Vector3(0, Input.mousePosition.y, 0);
+						Debug.Log("m_h");
+						Vector3 newPosition = new Vector3(10.0f, Input.mousePosition.y, 10.0f);
 						curObj.GetComponent<Rigidbody>().MovePosition(Camera.main.ScreenToWorldPoint(newPosition) + offset);
 					}
 					//Vector3 mousePosition = _camera.ScreenToWorldPoint(new Vector3(curObj.position.x, curObj.position.y, curObj.position.z));
@@ -120,10 +122,10 @@ public class Moves : MonoBehaviour
 		}
 		else if (curObj)
 		{
-			Debug.Log("ffff");
+			//Debug.Log("ffff");
 			if (curObj.GetComponent<Rigidbody>())
 			{
-				Debug.Log("gggg");
+				//Debug.Log("gggg");
 				//curObj.GetComponent<Rigidbody>().freezeRotation = false;
 				//curObj.GetComponent<Rigidbody>().useGravity = true;
 				curObj.GetComponent<Rigidbody>().mass = mass;
