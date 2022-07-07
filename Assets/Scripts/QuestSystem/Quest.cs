@@ -10,6 +10,7 @@ namespace QuestSystem
     public class Quest
     {
         public bool isActive;
+        public bool isCompleted;
         
         public int questId;
         public string questTitle;

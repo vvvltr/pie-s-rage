@@ -4,7 +4,7 @@ namespace QuestSystem
 {
     public class QuestUIManager : MonoBehaviour
     {
-        private static QuestUIManager Instance = null; // static (class level) variable
+        private static QuestUIManager Instance; // static (class level) variable
         
         private void Awake()
         {

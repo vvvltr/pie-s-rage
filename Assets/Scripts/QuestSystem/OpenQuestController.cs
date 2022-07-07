@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace QuestSystem
 {
-    public class PickScrapQuestController : QuestController
+    public class OpenQuestController : QuestController
     {
         public QuestManager questManager;
+
         private void Awake()
         {
             //thisQuest = new Quest(5, "Open door to engine quest", "Pick a scrap and open the locked door with it");

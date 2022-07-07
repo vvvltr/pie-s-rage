@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace QuestSystem
 {
-    public class PickScrapQuestController : QuestController
+    public class MoveBoxesScript : QuestController
     {
         public QuestManager questManager;
+
+        public GameObject questObject;
         private void Awake()
         {
             //thisQuest = new Quest(5, "Open door to engine quest", "Pick a scrap and open the locked door with it");
@@ -14,14 +14,15 @@ namespace QuestSystem
         }
         
         public void EndQuest()
-        { 
+        {
+            thisQuest.isActive = true;
             questManager.CompleteQuest(thisQuest);
-            questManager.Quests.Remove(thisQuest);
+            Destroy(questObject);
         }
 
         public void Start()
         {
-            thisQuest = questManager.Quests[1];
+            thisQuest = questManager.Quests[0];
         }
         
 
