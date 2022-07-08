@@ -19,7 +19,7 @@ public class PlaneRotate : MonoBehaviour
         Vector3 cabin = new Vector3(56.1668777f, 90, -3.0668466e-06f);
         v1 = transform.eulerAngles;
         if ((((int)v1[0] == 44 && ((int)v1[1] == 90 && (int)v1[2] == 0)) ||//hallway
-            ((int)v1[0] == 68 && ((int)v1[1] == 270 && (int)v1[2] == 0))) ||//cabin
+            ((int)v1[0] == 55 && ((int)v1[1] == 90 && (int)v1[2] == 0))) ||//cabin
             (((int)v1[0] == 296 && ((int)v1[1] == 270 && (int)v1[2] == 0)) ||//engine
             ((int)v1[0] == 56 && ((int)v1[1] == 90 && (int)v1[2] == 0)))//reactor
             )

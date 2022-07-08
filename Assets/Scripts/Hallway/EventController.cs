@@ -16,6 +16,7 @@ public class EventController : MonoBehaviour
     private bool miniGameOn;
     public bool miniGamePassed;
     public GameObject room;
+    public GameObject iskra;
     public GameObject moving_boxes_1;
     public GameObject moving_boxes_2;
     public GameObject canvas;
@@ -40,6 +41,7 @@ public class EventController : MonoBehaviour
         miniGamePassed = false;
         canvas.SetActive(false);
         room.SetActive(true);
+        iskra.SetActive(true);
     }  
 
     // Update is called once per frame
@@ -79,6 +81,7 @@ public class EventController : MonoBehaviour
         miniGameOn = false;
         miniGamePassed = true;
         canvas.SetActive(false);
+        iskra.SetActive(false);
         //room.SetActive(true);
     }
     public void StopMiniGame2()

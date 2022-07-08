@@ -84,7 +84,7 @@ public class QuestManager : MonoBehaviour
         completedQuest.isActive = false;
         completedQuest.isCompleted = true;
         CompletedQuests.Add(completedQuest);
-        Quests.Remove(completedQuest);
+        Quests.Remove(Quests[0]);
         if (Quests.Count > 0)
         {
             CurrentQuest = Quests[0];
