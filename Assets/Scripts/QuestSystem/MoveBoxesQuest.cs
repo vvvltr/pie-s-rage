@@ -14,15 +14,6 @@ namespace QuestSystem
         
         private void Awake()
         {
-            /*if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }*/
             thisQuest.isCompleted = false;
             action += EndQuest;
         }
@@ -37,6 +28,7 @@ namespace QuestSystem
 
         public void Start()
         {
+            questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
             thisQuest = questManager.Quests[0];
         }
 

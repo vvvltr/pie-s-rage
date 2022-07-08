@@ -32,6 +32,8 @@ namespace QuestSystem
             previousQuest = questManager.Quests[0];
             thisQuest = questManager.Quests[1];
             
+            questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
+            InventoryManager = GameObject.Find("InventoryManager").GetComponent("InventoryManager") as InventoryManager;
             action += EndQuest;
         }
 

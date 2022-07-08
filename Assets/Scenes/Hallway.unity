@@ -4499,7 +4499,7 @@ MonoBehaviour:
     isCompleted: 0
     questTitle: 
     questInfo: 
-  questManager: {fileID: 767907918}
+  questManager: {fileID: 0}
   _camera: {fileID: 963194227}
 --- !u!1 &1785946953
 GameObject:
