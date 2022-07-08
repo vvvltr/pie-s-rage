@@ -2357,6 +2357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6c18fd7efb21d4c9abd2ff7be020cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questManager: {fileID: 767907918}
+  MoveBoxesQuest: {fileID: 1699672885}
 --- !u!1 &990858630
 GameObject:
   m_ObjectHideFlags: 0

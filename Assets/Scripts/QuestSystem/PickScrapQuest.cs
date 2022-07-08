@@ -34,12 +34,13 @@ namespace QuestSystem
             
             questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
             InventoryManager = GameObject.Find("InventoryManager").GetComponent("InventoryManager") as InventoryManager;
+            Scrap = GameObject.Find("Scrap").GetComponent("ItemController") as ItemController;
             action += EndQuest;
         }
 
         private void Update()
         {
-            if (previousQuest.isCompleted)
+            if (questManager.CompletedQuests.Contains(previousQuest))
             {
                 Scrap.canBePicked = true;
                 if (InventoryManager.DestroyedItems.Contains(ScrapItem))

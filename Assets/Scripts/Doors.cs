@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using QuestSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Doors : MonoBehaviour
 {
+    public QuestManager questManager;
+
+    public MoveBoxesQuest MoveBoxesQuest;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +30,11 @@ public class Doors : MonoBehaviour
                 string n4 = n[0] + "" + n[1] + "" + n[2];
                 if (hit.collider != null && n4 == "Doo")
                 {
-                    if (n == "DoorToReactor")
+                    if (n == "DoorToReactor" && questManager.CompletedQuests.Count>1)
                         SceneManager.LoadScene("Reactor");
-                    else if (n == "DoorToCabin")
+                    else if (n == "DoorToCabin" && questManager.CompletedQuests.Count>2)
                         SceneManager.LoadScene("Cabin");
-                    else if (n == "DoorToEngine")
+                    else if (n == "DoorToEngine" && questManager.CompletedQuests.Count>4)
                         SceneManager.LoadScene("Engine");
                     else if (n == "DoorToHallway")
                         SceneManager.LoadScene("Hallway");
