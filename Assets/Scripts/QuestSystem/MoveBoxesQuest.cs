@@ -33,7 +33,7 @@ namespace QuestSystem
             thisQuest = questManager.Quests[0];
             if (questManager.CompletedQuests.Count>0)
             {
-                _camera.transform.GetComponent<EventController>().StopMiniGame();
+                _camera.transform.GetComponent<EventController>().StopMiniGame2();
             }
         }
 

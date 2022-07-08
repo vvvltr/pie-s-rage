@@ -81,6 +81,15 @@ public class EventController : MonoBehaviour
         canvas.SetActive(false);
         //room.SetActive(true);
     }
+    public void StopMiniGame2()
+    {
+        set_boxes_2();
+        miniGameOn = false;
+        clicked = false;
+        //miniGamePassed = true;
+        canvas.SetActive(false);
+        //room.SetActive(true);
+    }
     private void set_boxes_1()
     {
         moving_boxes_1.SetActive(true);
