@@ -30,6 +30,10 @@ namespace QuestSystem
         {
             questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
             thisQuest = questManager.Quests[0];
+            if (questManager.CompletedQuests.Count > 0)
+            {
+                _camera.transform.GetComponent<EventController>().StopMiniGame();
+            }
         }
 
         private void Update()
