@@ -13,6 +13,7 @@ public class EventController : MonoBehaviour
     private List<Vector3> b_pos_1;
     private List<Vector3> b_pos_2;
     private bool clicked;
+    private bool sp;
     private bool miniGameOn;
     public bool miniGamePassed;
     public GameObject room;
@@ -42,6 +43,7 @@ public class EventController : MonoBehaviour
         canvas.SetActive(false);
         room.SetActive(true);
         iskra.SetActive(true);
+        sp = false;
     }  
 
     // Update is called once per frame
@@ -56,7 +58,7 @@ public class EventController : MonoBehaviour
                 //GameObject target = hit.collider.GameObject;
                 string n = hit.transform.name;
                 string n3 = n[0] +""+ n[1] +""+ n[2];
-                if (hit.collider != null && (n3 == "Box" && !miniGamePassed))
+                if (((sp==false)&&(hit.collider != null)) && (n3 == "Box" && !miniGamePassed))
                 {
                     //room.SetActive(false);
                     canvas.SetActive(true);
@@ -88,7 +90,7 @@ public class EventController : MonoBehaviour
     {
         set_boxes_2();
         miniGameOn = false;
-        clicked = false;
+        sp = true;
         //miniGamePassed = true;
         canvas.SetActive(false);
         //room.SetActive(true);
