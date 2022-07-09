@@ -857,6 +857,7 @@ GameObject:
   - component: {fileID: 508829558}
   - component: {fileID: 508829556}
   - component: {fileID: 508829555}
+  - component: {fileID: 508829560}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -962,6 +963,22 @@ MonoBehaviour:
   moving_boxes_1: {fileID: 976850237}
   moving_boxes_2: {fileID: 1743468321}
   canvas: {fileID: 386462445}
+--- !u!114 &508829560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508829554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0566ceb0020d8d4e83e51531828e5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  l1: {fileID: 1543050875}
+  l2: {fileID: 559131691}
+  interval: 0
+  interval_d: 0
 --- !u!1 &535913834
 GameObject:
   m_ObjectHideFlags: 0

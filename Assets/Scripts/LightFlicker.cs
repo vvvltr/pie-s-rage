@@ -14,6 +14,7 @@ public class LightFlicker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ChangeTime();
         t = 0;
     }
 
@@ -30,7 +31,13 @@ public class LightFlicker : MonoBehaviour
             t = 0;
             l1.SetActive(true);
             l2.SetActive(true);
+            ChangeTime();
         }
         t++;
+    }
+    void ChangeTime()
+    {
+        interval = Random.Range(30, 50);
+        interval_d = Random.Range(2, 4);
     }
 }
