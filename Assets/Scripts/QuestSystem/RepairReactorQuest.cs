@@ -24,14 +24,14 @@ namespace QuestSystem
         {
             thisQuest.isCompleted = true;
             questManager.CompleteQuest(thisQuest);
-            
+            Sudoku.SetActive(true);
             action -= EndQuest;
         }
 
         public void Start()
         {            
             questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
-
+            
             previousQuest = questManager.Quests[1];
             thisQuest = questManager.Quests[2];
 
