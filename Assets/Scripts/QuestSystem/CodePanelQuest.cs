@@ -7,7 +7,6 @@ namespace QuestSystem
     {
         public QuestManager questManager;
 
-        public EnterButtonController enterButtonEvents;
         
         private event Action action;
         
@@ -28,6 +27,9 @@ namespace QuestSystem
         public void Start()
         {
             questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
+            
+            thisQuest = questManager.Quests[3];
+
         }
 
         private void Update()

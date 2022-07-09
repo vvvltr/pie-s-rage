@@ -29,9 +29,9 @@ public class Doors : MonoBehaviour
                 string n4 = n[0] + "" + n[1] + "" + n[2];
                 if (hit.collider != null && n4 == "Doo")
                 {
-                    if (n == "DoorToReactor" && questManager.CompletedQuests.Count>1 && questManager.CompletedQuests.Count < 3)
+                    if (n == "DoorToReactor" && questManager.Quests[1].isCompleted)
                         SceneManager.LoadScene("Reactor");
-                    else if (n == "DoorToCabin" && questManager.CompletedQuests.Count>5)
+                    else if (n == "DoorToCabin" && questManager.Quests[3].isCompleted)
                         SceneManager.LoadScene("Cabin");
                     else if (n == "DoorToEngine" && questManager.CompletedQuests.Count>3)
                         SceneManager.LoadScene("Engine");

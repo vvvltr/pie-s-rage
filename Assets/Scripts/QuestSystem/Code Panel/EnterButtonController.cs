@@ -11,7 +11,7 @@ namespace QuestSystem
         public GameObject ErrorMessage;
         public CodePanelQuest codePanelQuest;
 
-        public GameObject panelUI;
+        public CodePanelUIController codePanelUIController;
 
         public Action action;
 
@@ -36,7 +36,8 @@ namespace QuestSystem
             if (codePanelController.numbersEntered.Equals(code))
             {
                 codePanelQuest.EndQuest();
-                panelUI.SetActive(false);
+                codePanelUIController.panelUI.SetActive(false);
+                codePanelUIController.Room.SetActive(true);
 
             }
             else

@@ -5,12 +5,13 @@ namespace InventoryScripts
 {
     public class SudokuItemController : MonoBehaviour
     {
-        
+        public QuestManager questManager;
         public GameObject SudokuGameObject;
         public GameObject SudokuUI;
 
         public void Start()
         {
+            questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
         }
 
         private void OnMouseDown()
@@ -21,6 +22,11 @@ namespace InventoryScripts
         public void DisplaySudokuUI()
         {
             SudokuUI.SetActive(true);
+        }
+
+        private void Update()
+        {
+           
         }
     }
 }

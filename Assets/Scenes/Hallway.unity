@@ -3055,7 +3055,6 @@ MonoBehaviour:
     questTitle: 
     questInfo: 
   questManager: {fileID: 767907918}
-  enterButtonEvents: {fileID: 1610140816}
 --- !u!4 &913354735
 Transform:
   m_ObjectHideFlags: 0
@@ -6076,7 +6075,7 @@ MonoBehaviour:
   codePanelController: {fileID: 853188140}
   ErrorMessage: {fileID: 164633627}
   codePanelQuest: {fileID: 913354734}
-  panelUI: {fileID: 1298051901}
+  codePanelUIController: {fileID: 919132148398519584}
 --- !u!1 &1615657111
 GameObject:
   m_ObjectHideFlags: 0
@@ -8226,7 +8225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca4b7051d2b4786954a8d8aedbbbe0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questManager: {fileID: 0}
   panelUI: {fileID: 1298051901}
+  Room: {fileID: 252386865}
 --- !u!65 &919132148398519585
 BoxCollider:
   m_ObjectHideFlags: 0

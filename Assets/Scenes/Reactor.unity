@@ -6941,6 +6941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1cf5766b9c4833b8805f50bc70898e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questManager: {fileID: 388772046}
   SudokuGameObject: {fileID: 1124813064}
   SudokuUI: {fileID: 734429319}
 --- !u!1 &1168365128
