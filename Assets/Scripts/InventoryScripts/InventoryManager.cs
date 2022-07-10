@@ -56,5 +56,6 @@ namespace InventoryScripts
             newInventoryElement.transform.Find("name").GetComponent<Text>().text = item.itemName;
             newInventoryElement.transform.Find("icon").GetComponent<Image>().sprite = item.itemIcon;
         }
+        
     }
 }

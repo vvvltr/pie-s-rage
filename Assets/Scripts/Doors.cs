@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using InventoryScripts;
 using QuestSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,10 +8,12 @@ using UnityEngine.SceneManagement;
 public class Doors : MonoBehaviour
 {
     public QuestManager questManager;
+
+    public InventoryManager InventoryManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        InventoryManager = GameObject.Find("InventoryManager").GetComponent("InventoryManager") as InventoryManager;
     }
 
     // Update is called once per frame
@@ -33,7 +36,7 @@ public class Doors : MonoBehaviour
                         SceneManager.LoadScene("Reactor");
                     else if (n == "DoorToCabin" && questManager.Quests[3].isCompleted)
                         SceneManager.LoadScene("Cabin");
-                    else if (n == "DoorToEngine" && questManager.CompletedQuests.Count>3)
+                    else if (n == "DoorToEngine" && questManager.Quests[4].isCompleted && InventoryManager.DestroyedItems.Count > 0)
                         SceneManager.LoadScene("Engine");
                     else if (n == "DoorToHallway")
                         SceneManager.LoadScene("Hallway");

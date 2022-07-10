@@ -6113,6 +6113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questManager: {fileID: 0}
+  InventoryManager: {fileID: 0}
 --- !u!114 &638677839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7342,6 +7343,7 @@ MonoBehaviour:
     questTitle: 
     questInfo: 
   Sudoku: {fileID: 1124813064}
+  Particles: {fileID: 244531442}
   _camera: {fileID: 638677835}
 --- !u!4 &1390796998
 Transform:

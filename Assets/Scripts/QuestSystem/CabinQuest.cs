@@ -1,16 +1,13 @@
 ﻿using System;
-using InventoryScripts;
 using UnityEngine;
 
 namespace QuestSystem
 {
-    public class RepairReactorQuest : QuestController
+    public class CabinQuest : QuestController
     {
         public QuestManager questManager;
         public Quest previousQuest;
 
-        public GameObject Sudoku;
-        public GameObject Particles;
         
         public Camera _camera;
         
@@ -25,17 +22,16 @@ namespace QuestSystem
         {
             thisQuest.isCompleted = true;
             questManager.CompleteQuest(thisQuest);
-            Sudoku.SetActive(true);
-            Particles.SetActive(false);
+            
             action -= EndQuest;
         }
 
         public void Start()
         {            
             questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
-            
-            previousQuest = questManager.Quests[1];
-            thisQuest = questManager.Quests[2];
+
+            previousQuest = questManager.Quests[3];
+            thisQuest = questManager.Quests[4];
 
             action += EndQuest;
         }
@@ -47,10 +43,6 @@ namespace QuestSystem
                 action?.Invoke();
             }
 
-            if (questManager.Quests[2].isCompleted)
-            {
-                Particles.SetActive(false);
-            }
         }
     }
 }
