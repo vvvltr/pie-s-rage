@@ -3495,6 +3495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questManager: {fileID: 767907918}
+  InventoryManager: {fileID: 0}
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3632,8 +3633,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001562372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45742, y: -1.2198, z: 19.516}
-  m_LocalScale: {x: 1.6099, y: 1.6099, z: 1.6099}
+  m_LocalPosition: {x: 0.00000045368, y: -1, z: -6.4268}
+  m_LocalScale: {x: 1.6099, y: 1.6099, z: 2.0540714}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1688502028}
