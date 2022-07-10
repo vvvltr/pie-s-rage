@@ -944,6 +944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questManager: {fileID: 0}
+  InventoryManager: {fileID: 0}
 --- !u!114 &508829559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7837,6 +7838,7 @@ MonoBehaviour:
     isCompleted: 0
     questTitle: 
     questInfo: 
+  particles: {fileID: 598988685}
   _camera: {fileID: 508829556}
 --- !u!1001 &1651083104
 PrefabInstance:

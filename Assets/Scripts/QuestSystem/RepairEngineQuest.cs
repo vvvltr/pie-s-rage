@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace QuestSystem
 {
-    public class CabinQuest : QuestController
+    public class RepairEngineQuest : QuestController
     {
         public QuestManager questManager;
         public Quest previousQuest;
@@ -32,8 +32,8 @@ namespace QuestSystem
         {            
             questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
 
-            previousQuest = questManager.Quests[3];
-            thisQuest = questManager.Quests[4];
+            previousQuest = questManager.Quests[4];
+            thisQuest = questManager.Quests[5];
 
             action += EndQuest;
         }
@@ -45,10 +45,6 @@ namespace QuestSystem
                 action?.Invoke();
             }
 
-            if (questManager.Quests[4].isCompleted)
-            {
-                particles.SetActive(false);
-            }
         }
     }
 }

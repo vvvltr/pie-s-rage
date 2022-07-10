@@ -25,7 +25,7 @@ public class QuestManager : MonoBehaviour
         Quests.Add(new Quest("Repair reactor quest", "Rotate pieces of picture to solve it"));
         Quests.Add(new Quest("Code panel quest", "Enter right password to get access to the cabin room"));
         Quests.Add(new Quest("Cabin panel quest", "Rotate pieces of picture to solve it"));
-        Quests.Add(new Quest("Open door to engine quest", "Pick a scrap and open the locked door with it"));
+        //Quests.Add(new Quest("Open door to engine quest", "Pick a scrap and open the locked door with it"));
         Quests.Add(new Quest("Repair engine quest", "Rotate pieces of wires to connect them and make the engine start"));
         Quests[0].isActive = true;
     }
@@ -89,8 +89,11 @@ public class QuestManager : MonoBehaviour
         if (Quests.Count > 0)
         {
             currentID++;
-            CurrentQuest = Quests[currentID];
-            
+            if (CompletedQuests.Count <=5)
+            {
+                CurrentQuest = Quests[currentID];
+            }
+
             DisplayQuest();
         }
     }
