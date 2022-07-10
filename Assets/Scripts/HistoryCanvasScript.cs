@@ -5,13 +5,18 @@ namespace DefaultNamespace
 {
     public class HistoryCanvasScript : MonoBehaviour
     {
+        public QuestManager questManager;
+        
         public GameObject HistoryCanvas;
         public Action Action;
 
         public BoxCollider RoomCollider;
+        
 
         public void Start()
         {
+            questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
+
             Action += DestroyAfterSeconds;
         }
 
@@ -26,6 +31,11 @@ namespace DefaultNamespace
         private void Update()
         {
             Action?.Invoke();
+            if (questManager.CompletedQuests.Count > 0)
+            {
+                Destroy(HistoryCanvas);
+                Destroy(RoomCollider);
+            }
         }
     }
 }
