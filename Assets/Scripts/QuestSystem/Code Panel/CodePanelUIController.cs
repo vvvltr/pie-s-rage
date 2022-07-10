@@ -17,11 +17,9 @@ namespace QuestSystem
 
         public void OnMouseDown()
         {
-            if (questManager.Quests[2].isCompleted && questManager.CompletedQuests.Count > 2)
-            {
-                panelUI.SetActive(true);
-                Room.SetActive(false);
-            }
+            panelUI.SetActive(true);
+            Room.SetActive(false);
+            
         }
 
     }

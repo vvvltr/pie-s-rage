@@ -6,7 +6,6 @@ namespace QuestSystem
     public class CodePanelQuest : QuestController
     {
         public QuestManager questManager;
-
         
         private event Action action;
         

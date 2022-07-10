@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace QuestSystem
 {
@@ -24,6 +25,7 @@ namespace QuestSystem
             thisQuest.isCompleted = true;
             questManager.CompleteQuest(thisQuest);
             particles.SetActive(false);
+            SceneManager.LoadScene("Win");
             
             action -= EndQuest;
         }

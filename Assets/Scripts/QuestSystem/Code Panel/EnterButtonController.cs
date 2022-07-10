@@ -32,7 +32,7 @@ namespace QuestSystem
 
         public void CheckCode()
         {
-            var code = "2778";
+            var code = "2776";
             if (codePanelController.numbersEntered.Equals(code))
             {
                 codePanelQuest.EndQuest();

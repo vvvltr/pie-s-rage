@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Defeat.unity
     guid: 7b3a5b76c11e6a1419e79b5821b2a5ed
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: b2e1369d7c6588b479bceb94723efc44
   m_configObjects: {}
