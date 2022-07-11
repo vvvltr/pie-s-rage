@@ -8,16 +8,20 @@ namespace QuestSystem
     {
         public CodePanelController codePanelController;
 
+        public QuestManager questManager;
+
         public GameObject ErrorMessage;
         public CodePanelQuest codePanelQuest;
-
+        public GameObject InventoryUI;
+        public GameObject QuestUI;
         public CodePanelUIController codePanelUIController;
 
         public Action action;
 
         private void Start()
         {
-            //codePanelController = GameObject.Find("CodePanelLock").GetComponent("CodePanelController") as CodePanelController;
+            questManager = GameObject.Find("QuestManager").GetComponent("QuestManager") as QuestManager;
+
         }
 
         public void ClearMessage()
@@ -33,12 +37,13 @@ namespace QuestSystem
         public void CheckCode()
         {
             var code = "2776";
-            if (codePanelController.numbersEntered.Equals(code))
+            if (codePanelController.numbersEntered.Equals(code) && questManager.Quests[2].isCompleted)
             {
                 codePanelQuest.EndQuest();
                 codePanelUIController.panelUI.SetActive(false);
                 codePanelUIController.Room.SetActive(true);
-
+                InventoryUI.SetActive(true);
+                QuestUI.SetActive(true);
             }
             else
             {
