@@ -3195,6 +3195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4dc98173ae450997ca0cf52b14d291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questManager: {fileID: 0}
   HistoryCanvas: {fileID: 882270291}
   RoomCollider: {fileID: 252386867}
 --- !u!1 &894248541

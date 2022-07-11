@@ -7,7 +7,7 @@ namespace DefaultNamespace
     {
         public void ReturnToMenu()
         {
-            SceneManager.LoadScene("Menu");
+            Application.Quit();
         }
     }
 }

@@ -51,7 +51,16 @@ public class Timer : MonoBehaviour
                 _timerOn = false; 
                 SceneManager.LoadScene("Defeat");
             }
-
+            if(SceneManager.GetActiveScene().name == "Win")
+            {
+                _timerOn = false;
+                _timeLeft = time;
+                timerText.text = " ";
+            }
+            if(SceneManager.GetActiveScene().name == "Hallway" && _timerOn == false)
+            {
+                _timerOn = true;
+            }
         }
     }
 
