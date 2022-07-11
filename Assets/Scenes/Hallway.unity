@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fafce7606cc1040a11da3dafe5b5ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 600
+  time: 300
   timerText: {fileID: 240909707}
 --- !u!1 &252386865
 GameObject:
@@ -3100,7 +3100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &882270292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3758,7 +3758,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 35, y: -90, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -4480,7 +4480,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 47.277, y: -90, z: 0}
 --- !u!1 &1168713781
 GameObject:
@@ -5481,7 +5481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1298051902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7247,7 +7247,7 @@ MonoBehaviour:
   m_text: 'Memory:
 
     I passed out when attacked by something, no one could survive,
-    I urgently need to fix the submarine otherwise in 10 minutes it will explode'
+    I urgently need to fix the submarine otherwise in 5 minutes it will explode'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
